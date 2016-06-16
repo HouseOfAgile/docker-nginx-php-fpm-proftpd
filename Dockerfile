@@ -1,9 +1,6 @@
 FROM houseofagile/docker-nginx-php-fpm:latest
 
 MAINTAINER Meillaud Jean-Christophe (jc@houseofagile.com)
-ADD apt_package_list.txt /tmp/pureftpd_nginx_apt_package_list.txt
-RUN apt-get install --force-yes -y $(cat /tmp/pureftpd_nginx_apt_package_list.txt)
-
 
 # install pureftpd: compile with proper options for running inside docker  
 ADD install_pureftpd.sh /tmp/
